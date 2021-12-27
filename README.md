@@ -1,4 +1,4 @@
-# portafolio
+# CV
 
 ## Project setup
 ```
