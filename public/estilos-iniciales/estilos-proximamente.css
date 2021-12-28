@@ -344,6 +344,7 @@ footer {
   margin-block-end: 0;
   opacity: 0;
   padding-inline-start: 0;
+  pointer-events: none;
   transform: translateY(-100%);
   transition-property: opacity, transform;
   transition-duration: .3s;
@@ -356,5 +357,6 @@ footer {
 
 .checkbox-toggle input[type="checkbox"]:checked ~ .list {
   opacity: 1;
+  pointer-events: auto;
   transform: translateY(0);
 }
