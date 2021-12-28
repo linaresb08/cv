@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Información personal básica -->
+  <title>Betzabeth Linares | CV | Próximamente</title>
+  <meta name="description" content="CV de Betzabeth Linares | Ingeniero de Computación | Especialista en el desarrollo Front end"/>
+  <meta name="keywords" content="Betzabeth Linares, Desarrolladora Front end, Ingeniero de Computación, HTML, CSS, JavaScript, SASS, NodeJS, Vue"/>
+  <meta name="author" content="Betzabeth Linares" />
+  <meta name="copyright" content="Betzabeth Linares" />
+
+  <!-- Define tema -->
+  <meta name="theme-color" content="#23262C">
+  <!--
+    The page supports both dark and light color schemes,
+    and the page author prefers dark. Example for both: content="dark light"
+  -->
+  <meta name="color-scheme" content="dark" />
+
+  <!-- Iconos -->
+  <link rel="icon" type="image/x-icon" href="public/favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="public/favicon-144x144.ico">
+
+  <!-- Para indexación y recorrido de enlaces internos -->
+  <meta name="robots" content="index,follow" />
+
+  <!-- Enlace principal -->
+  <link rel="canonical" href="https://linaresb08.github.io/cv/" />
+
+  <!-- Actualización -->
+  <meta name="updated" content="<%= new Date() %>">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="public/estilos-iniciales/estilos-proximamente.css">
+</head>
+<body>
+  <div class="flex-column flex-center minH-100vh contenedor-principal">
+    <span class="align-self_start ml-3 p-1 texto-display-1">
+      Coming soon...
+    </span>
+    <section class="contenedor flex-row flex-center pb-4">
+      <img src="public/imgs/alternativas-logo/Sello-BL.svg" alt="Sello Betzabeth Linares" class="logo-sello">
+      <div class="col-11 col-lg ml-lg-4 px-lg-4">
+        <header>
+          <span class="d-block mt-3 mb-n3 texto-code">Hello world!</span>
+          <h2>
+            Soy
+            <span class="texto-bold">
+              Betzabeth Linares
+            </span>
+          </h2>
+          <small class="d-block">Desarrolladora Front-end | Ingeniero de Computación</small>
+        </header>
+        <p>
+          Amante del diseño y las buenas prácticas, persona responsable, colaboradora y autodidacta; con capacidades de resolución de problemas y trabajo en equipo. Mi fortaleza es convertir los diseños en vistas responsivas de la web.
+        </p>
+        <div class="checkbox-toggle">
+          <label for="checkbox-contactar" class="boton">
+            Contactar
+          </label>
+          <input type="checkbox" name="toggle-contacto" id="checkbox-contactar">
+          <ul class="list">
+            <li>
+              <a href="https://www.linkedin.com/in/linaresb08/" target="_blank" rel="noopener noreferrer" class="boton">LinkedIn</a>
+            </li>
+            <li>
+              <a href="https://t.me/Linaresbi" target="_blank" rel="noopener noreferrer" class="boton">Telegram</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer class="p-3">
+    <h1 class="d-inline-block">Betzabeth Linares</h1>
+    &#9400 <span id="currentYear"></span> |
+    Todos los derechos reservados.
+  </footer>
+
+  <script>
+    const currentYear = new Date().getFullYear();
+    const elementToYear = document.getElementById('currentYear');
+    elementToYear.textContent = currentYear;
+
+  </script>
+</body>
+</html>

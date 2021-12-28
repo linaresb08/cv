@@ -1,0 +1,360 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@400;500;700&display=swap'); /* Principal */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap'); /* Código */
+
+/* Define variables de color */
+:root {
+  /* Fondos */
+  --fondo: #1F2022;
+  --fondo-alternativo: #23262C;
+
+  /* Textos */
+  --codigo: #00E382;
+  --encabezados: #C8E6F3; /* RGB: rgb(200, 230, 243) */
+  --enlaces: #08C7C0;
+  --texto: #F8F6F2;
+  --texto-alternativo: #7ABBD9; /* RGB: 	rgb(122, 187, 217) */
+}
+
+
+/****
+ *
+ * Reset
+ *
+****/
+* {
+  box-sizing: border-box;
+  color: var(--texto);
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Smooth scroll */
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--fondo);
+  margin: 0;
+}
+
+
+/****
+ *
+ * Scrollbar
+ *
+****/
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: var(--fondo-alternativo);
+}
+::-webkit-scrollbar {
+  background-color: var(--encabezados);
+  height: 8px;
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: #9fadbd;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: 	rgba(200, 230, 243, .5);
+}
+
+/****
+ *
+ * Textos
+ *
+****/
+
+/* Encabezados */
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--encabezados);
+  line-height: 1.15;
+  margin: 1.25rem 0 .5rem;
+}
+
+h1,
+h3,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: inherit;
+  margin: 0;
+}
+h2 {
+  font-size: 2rem;
+  letter-spacing: -0.01em;
+}
+h3 {
+  font-size: 1.56rem;
+  letter-spacing: -0.01em;
+}
+h4 {
+  font-size: 1.25rem;
+}
+h6 {
+  font-size: .9rem;
+}
+
+/* Texto small */
+small {
+  font-size: .8rem;
+  letter-spacing: 0.05em;
+  line-height: 1.18;
+}
+
+/* Texto monoespaciado */
+code,
+samp,
+kbd,
+var,
+.texto-code {
+  color: var(--codigo);
+  font-family: 'Fira Code', monospace;
+}
+
+/* Textos displays */
+.texto-display-1 {
+  color: 	rgba(122, 187, 217, .1);
+  font-size: 2.5rem;
+  /* font-size: 3.67rem; */
+}
+
+/* Utilidades de texto */
+.texto-bold {
+  color: inherit;
+  font-size: inherit;
+  font-weight: 700;
+}
+
+
+
+/****
+ *
+ * Botones
+ *
+****/
+/* Botón básico */
+.boton {
+  border: 1px solid var(--enlaces);
+  border-radius: 1.5rem;
+  color: var(--enlaces);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  margin: .25rem .5rem;
+  padding: .5rem 1.75rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition-property: border-color, color;
+  transition-duration: .25s;
+  transition-timing-function: ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.boton:hover {
+  border-color: var(--codigo);
+  color: var(--codigo);
+}
+
+.boton:visited {
+  border-color: var(--texto-alternativo);
+  color: var(--texto-alternativo);
+}
+
+
+/****
+ *
+ * Contenedores
+ *
+****/
+footer {
+  background-color: var(--fondo-alternativo);
+  font-size: .9rem;
+  text-align: center;
+}
+
+/* Contenedores */
+.contenedor-principal {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+@media screen and (min-width: 1200px) {
+  .contenedor-principal {
+    max-width: 1000px;
+  }
+}
+
+.contenedor {
+  max-width: 100%;
+  padding: 0 1rem;
+  position: relative;
+}
+
+/* Displays */
+.d-block {
+  display: block;
+}
+.d-inline-block {
+  display: inline-block;
+}
+.d-inline {
+  display: inline;
+}
+
+/* Flexbox */
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-row {
+  display: flex;
+  flex-flow: row wrap;
+}
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+/* Alignments */
+.align-self_start {
+  align-self: flex-start;
+}
+
+/* Distribución de columnas */
+.col-11 {
+  flex: 0 0 91.666667%;
+  max-width: 91.666667%;
+}
+.col-10 {
+  flex: 0 0 83.333333%;
+  max-width: 83.333333%;
+}
+
+@media screen and (min-width: 992px) {
+  .col-lg {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+}
+
+/****
+ *
+ * Utilidades width, height, margins, paddings y positions
+ *
+****/
+/* Height */
+.minH-100vh {
+  min-height: calc(100vh - 87px); /* - footer */
+}
+
+@media screen and (min-width: 442px) {
+  .minH-100vh {
+    min-height: calc(100vh - 63px); /* - footer */
+  }
+}
+
+/* Margins */
+.mb-n3 {
+  margin-bottom: -1rem;
+}
+.mt-3 {
+  margin-top: 1rem;
+}
+.ml-3 {
+  margin-left: 1rem;
+}
+@media screen and (min-width: 992px) {
+  .ml-lg-4 {
+    margin-left: 1.5rem;
+  }
+}
+
+/* Paddings */
+.p-3 {
+  padding: 1rem;
+}
+.pb-4 {
+  padding-bottom: 1.5rem;
+}
+@media screen and (min-width: 992px) {
+  .px-lg-4 {
+    padding: 0 1.5rem;
+  }
+}
+
+/****
+ *
+ * Clases logo
+ *
+****/
+/* Sello */
+.logo-sello {
+  width: 40%;
+}
+@media screen and (min-width: 992px) {
+  .logo-sello {
+    width: 30%;
+  }
+}
+
+
+/****
+ *
+ * Clases específicas
+ *
+****/
+.checkbox-toggle {
+  text-align: center;
+}
+.checkbox-toggle label {
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+.checkbox-toggle .list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  list-style-type:  none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  opacity: 0;
+  padding-inline-start: 0;
+  transform: translateY(-100%);
+  transition-property: opacity, transform;
+  transition-duration: .3s;
+  transition-timing-function: ease;
+}
+
+.checkbox-toggle input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-toggle input[type="checkbox"]:checked ~ .list {
+  opacity: 1;
+  transform: translateY(0);
+}
