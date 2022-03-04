@@ -1,0 +1,31 @@
+// Light theme configurations terminar después
+@media (prefers-color-scheme: light) {
+  // Corregir colores
+  $primary: #02837f;
+  $secondary: #017945;
+
+  // Backgrounds
+  $bg-main: #f5f5f5;
+  $bg-complementary: #f3f7ff; // falta configurar
+
+  $text-main: #1F2022;
+
+
+
+  body {
+    background-color: $bg-main;
+  }
+  p, span {
+    color: $text-main;
+  }
+
+  /* Texto monoespaciado */
+  code,
+  samp,
+  kbd,
+  var,
+  .texto-code {
+    color: $secondary;
+  }
+
+}
