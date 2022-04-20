@@ -16,6 +16,19 @@
   --texto-alternativo: #7ABBD9; /* RGB: 	rgb(122, 187, 217) */
 }
 
+.light-theme {
+  /* Fondos */
+  --fondo: #F8F6F2;
+  --fondo-alternativo: #23262C;
+
+  /* Textos */
+  --codigo: #00E382;
+  --encabezados: #C8E6F3; /* RGB: rgb(200, 230, 243) */
+  --enlaces: #08C7C0;
+  --texto: #1F2022;
+  --texto-alternativo: #7ABBD9; /* RGB: 	rgb(122, 187, 217) */
+}
+
 
 /****
  *
