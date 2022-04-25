@@ -2,7 +2,7 @@
 
 .btn {
   background-color: transparent;
-  border: 1px solid transparent;
+  border: 1.5px solid transparent;
   border-radius: 1.5rem;
   cursor: pointer;
   display: inline-block;
@@ -10,7 +10,7 @@
   font-weight: 600;
   letter-spacing: 0.1em;
   margin: .25rem .5rem;
-  padding: .5rem 1.75rem;
+  padding: .75rem 1.75rem;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -28,5 +28,3 @@
     outline: none;
   }
 }
-
-// Falta asignar colores según tema
