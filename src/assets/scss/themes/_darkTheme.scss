@@ -1,0 +1,76 @@
+// Dark theme configurations
+.dark-theme {
+  /****
+  *
+  * Colors
+  *
+  ****/
+  // Main
+  $primary: #08C7C0;
+  $primary-disabled:rgba(8, 199, 192, 0.3);
+  $secondary: #00E382;
+  $secondary-disabled:rgba(0, 227, 130, 0.3);
+
+  // Backgrounds
+  $bg-main: #1F2022;
+  $bg-complementary: #23262C;
+
+  // Texts
+  $text-heading: #C8E6F3;
+  $text-main: #F8F6F2;
+  $text-muted: #7ABBD9;
+
+  // Color Maps
+  $colors: (
+    "primary" $primary $primary-disabled,
+    "secondary" $secondary $secondary-disabled
+  );
+
+  // Base
+  background-color: $bg-main;
+  color: #f5f5f5;
+
+
+  h2, h3, h4, h5, h6 {
+    color: $text-heading;
+  }
+
+  h1, p, span {
+    color: $text-main;
+  }
+
+  code, samp, kbd, var,
+  .texto-code {
+    color: $secondary;
+  }
+
+  .btn {
+    border-color: $primary;
+    color: $primary;
+
+    &:active {
+      background-color: lighten($secondary, 15%);
+      color: $bg-main;
+    }
+
+    &:hover {
+      background-color: $secondary;
+      border-color: $secondary;
+      color: $bg-main;
+    }
+
+    &:hover[disabled],
+    &[disabled] {
+      background-color: $secondary-disabled;
+      border-color: $secondary-disabled;
+      color: $bg-main;
+      cursor: not-allowed;
+    }
+  }
+
+  // Genereting custom color classes
+  @each $name, $hexColor, $rgbaColor in $colors {
+    .text-#{$name} {color: $hexColor;}
+    .text-#{$name}[disabled] {color: $rgbaColor;}
+  }
+}

@@ -1,0 +1,10 @@
+// Application styles
+@import "./components/_base";
+
+/* Custom Components */
+@import "./components/_texts";
+@import "./components/_buttons";
+
+/* Themes availables */
+@import "./themes/_darkTheme";
+@import "./themes/_lightTheme";
