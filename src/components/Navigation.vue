@@ -2,7 +2,7 @@
   <header class="nav__container">
     <div class="nav__brand">
       <a href="#">
-        <img src="#" alt="Logo">
+        <img src="#" alt="Logo" />
       </a>
     </div>
     <nav class="nav__list">
