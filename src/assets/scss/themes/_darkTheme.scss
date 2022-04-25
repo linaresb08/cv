@@ -1,5 +1,5 @@
 // Dark theme configurations
-@media (prefers-color-scheme: dark) {
+.dark-theme {
   /****
   *
   * Colors
@@ -7,7 +7,9 @@
   ****/
   // Main
   $primary: #08C7C0;
+  $primary-disabled:rgba(8, 199, 192, 0.3);
   $secondary: #00E382;
+  $secondary-disabled:rgba(0, 227, 130, 0.3);
 
   // Backgrounds
   $bg-main: #1F2022;
@@ -20,37 +22,14 @@
 
   // Color Maps
   $colors: (
-    "primary" $primary rgba(8, 199, 192, 0.7),
-    "secondary" $secondary rgba(0, 227, 130, 0.6)
+    "primary" $primary $primary-disabled,
+    "secondary" $secondary $secondary-disabled
   );
 
-  /****
-  *
-  * Scrollbar
-  *
-  ****/
-  ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-    background-color: var($bg-complementary);
-  }
-  ::-webkit-scrollbar {
-    background-color: var($text-heading);
-  }
-  ::-webkit-scrollbar-thumb {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-    background-color: #9fadbd;
-  }
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: 	rgba(200, 230, 243, .5);
-  }
-
   // Base
-  body {
-    background-color: $bg-main;
-  }
+  background-color: $bg-main;
+  color: #f5f5f5;
+
 
   h2, h3, h4, h5, h6 {
     color: $text-heading;
@@ -69,16 +48,29 @@
     border-color: $primary;
     color: $primary;
 
+    &:active {
+      background-color: lighten($secondary, 15%);
+      color: $bg-main;
+    }
+
     &:hover {
       background-color: $secondary;
       border-color: $secondary;
       color: $bg-main;
+    }
+
+    &:hover[disabled],
+    &[disabled] {
+      background-color: $secondary-disabled;
+      border-color: $secondary-disabled;
+      color: $bg-main;
+      cursor: not-allowed;
     }
   }
 
   // Genereting custom color classes
   @each $name, $hexColor, $rgbaColor in $colors {
     .text-#{$name} {color: $hexColor;}
-    .text-#{$name}-faded {color: $rgbaColor;}
+    .text-#{$name}[disabled] {color: $rgbaColor;}
   }
 }
