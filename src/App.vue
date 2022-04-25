@@ -2,6 +2,7 @@
   <div id="app" :class="theme ? 'light-theme' : 'dark-theme'">
     <Navigation />
     <Cover />
+    <Qualities />
     <img alt="Vue logo" src="./assets/logo.png" />
     <button class="btn" @click="changeTheme">Hola</button>
     <code>hola</code>
@@ -11,12 +12,14 @@
 <script>
 import Cover from './components/Cover.vue';
 import Navigation from './components/Navigation.vue';
+import Qualities from './components/Qualities.vue';
 
 export default {
   name: 'App',
   components: {
     Cover,
     Navigation,
+    Qualities,
   },
   data() {
     return {
