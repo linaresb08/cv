@@ -32,6 +32,8 @@ h3 {
 }
 h4 {
   font-size: 1.25rem;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 h5 {
   font-size: 1rem;
@@ -63,6 +65,13 @@ var,
 }
 
 /* Custom class text */
+// h3's Subtitle text
+[data-subtitle]::after {
+  content: attr(data-subtitle);
+  letter-spacing: 0.535em;
+  text-transform: uppercase;
+}
+
 .text-bold {
   color: inherit;
   font-size: inherit;
