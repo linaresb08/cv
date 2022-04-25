@@ -7,9 +7,9 @@
     </div>
     <nav class="nav__list">
       <a v-for="link in links" :key="link.name" :href="link.anchorTag">
+        <fa-icon :icon="link.icon" />
         {{ link.name }}
       </a>
-      <fa-icon icon="bars" />
     </nav>
   </header>
 </template>
@@ -23,22 +23,22 @@ export default {
         {
           name: 'Educación',
           anchorTag: '#',
-          icon: '',
+          icon: 'graduation-cap',
         },
         {
           name: 'Experiencia',
           anchorTag: '#',
-          icon: '',
+          icon: 'suitcase',
         },
         {
           name: 'Herramientas',
           anchorTag: '#',
-          icon: '',
+          icon: 'desktop',
         },
         {
           name: 'Contacto',
           anchorTag: '#',
-          icon: '',
+          icon: 'phone',
         },
       ],
     };
