@@ -17,6 +17,7 @@
 
   // Texts
   $text-heading: #C8E6F3;
+  $text-subtitles: rgba(200, 230, 243, 0.1);
   $text-main: #F8F6F2;
   $text-muted: #7ABBD9;
 
@@ -43,6 +44,12 @@
   .texto-code {
     color: $secondary;
   }
+
+  // h3's Subtitle text color
+  [data-subtitle]::after {
+    color: rgba(200, 230, 243, 0.1);
+  }
+
 
   .btn {
     border-color: $primary;
