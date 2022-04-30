@@ -22,7 +22,7 @@ export default {
       links: [
         {
           name: 'Educación',
-          anchorTag: '#',
+          anchorTag: '#educacion',
           icon: 'graduation-cap',
         },
         {
