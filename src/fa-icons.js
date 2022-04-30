@@ -1,6 +1,7 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faBookReader,
+  faBuilding,
   faCalendarCheck,
   faCheck,
   faCheckDouble,
@@ -22,6 +23,7 @@ import { faSlideshare } from '@fortawesome/free-brands-svg-icons';
 library.add(
   // Solid
   faBookReader,
+  faBuilding,
   faCalendarCheck,
   faCheck,
   faCheckDouble,

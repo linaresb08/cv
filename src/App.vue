@@ -4,6 +4,7 @@
     <Cover />
     <Qualities />
     <Education />
+    <Trainings />
     <img alt="Vue logo" src="./assets/logo.png" />
     <button class="btn" @click="changeTheme">Hola</button>
     <code>hola</code>
@@ -15,6 +16,7 @@ import Cover from './components/Cover.vue';
 import Education from './components/Education.vue';
 import Navigation from './components/Navigation.vue';
 import Qualities from './components/Qualities.vue';
+import Trainings from './components/Trainings.vue';
 
 export default {
   name: 'App',
@@ -23,6 +25,7 @@ export default {
     Education,
     Navigation,
     Qualities,
+    Trainings,
   },
   data() {
     return {
