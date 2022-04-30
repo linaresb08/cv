@@ -5,50 +5,36 @@
     <div>
       <div>
         <h4>Idiomas</h4>
-        <ol>
-          <li>
-            Español
-            <p>Nativo</p>
-
-            <ul>
-              <li class="check-double">Lectura</li>
-              <li class="check-double">Escritura</li>
-              <li class="check-double">Oral</li>
-              <li class="check-double">Auditiva</li>
-            </ul>
-          </li>
-          <li>
-            Inglés
-            <p>Intermedio - B1</p>
-
-            <ul>
-              <li class="check-double">Lectura</li>
-              <li class="check-double">Escritura</li>
-              <li class="check">Oral</li>
-              <li class="check">Auditiva</li>
+        <ol class="languages-list">
+          <li v-for="language in languages" :key="language.name">
+            {{ language.name }}
+            <small>{{ language.level }}</small>
+            <ul class="icon-list">
+              <li v-for="(icon, skill, index) in language.skills" :key="index">
+                <fa-icon :icon="icon" />
+                {{ skill }}
+              </li>
             </ul>
           </li>
         </ol>
       </div>
       <div>
         <h4>Personales</h4>
-        <ul>
-          <li>Autodidacta</li>
-          <li>Buenas relaciones interpersonales</li>
-          <li>Colaboradora</li>
-          <li>Habilidades de adaptación a cualquier entorno</li>
-          <li>Proactiva</li>
-          <li>Puntual y responsable</li>
+        <ul class="icon-list">
+          <li v-for="(item, icon) in personal" :key="icon">
+            <fa-icon :icon="icon" />
+            {{ item }}
+          </li>
         </ul>
       </div>
       <div>
         <h4>Laborales</h4>
-        <ul>
-          <li>Adaptabilidad a horarios flexibles</li>
-          <li>Capacidad para trabajar bajo presión</li>
-          <li>Habilidad para aprender programas rápidamente</li>
-          <li>Trabajo en equipo</li>
-          <li>Sentido de pertenencia empresarial</li>
+        <ul class="icon-list">
+          <li v-for="(item, icon) in work" :key="icon">
+            <fa-icon v-if="icon === 'slideshare'" :icon="['fab', icon]" />
+            <fa-icon v-else :icon="icon" />
+            {{ item }}
+          </li>
         </ul>
       </div>
     </div>
@@ -58,36 +44,74 @@
 <script>
 export default {
   name: 'Qualities',
+  data() {
+    return {
+      languages: [
+        {
+          name: 'Español',
+          level: 'Nativo',
+          skills: {
+            'Lectura': 'check-double', // eslint-disable-line
+            'Escritura': 'check-double', // eslint-disable-line
+            'Oral': 'check-double', // eslint-disable-line
+            'Auditiva': 'check-double', // eslint-disable-line
+          },
+        },
+        {
+          name: 'Inglés',
+          level: 'Intermedio - B1',
+          skills: {
+            'Lectura': 'check-double', // eslint-disable-line
+            'Escritura': 'check-double', // eslint-disable-line
+            'Oral': 'check', // eslint-disable-line
+            'Auditiva': 'check', // eslint-disable-line
+          },
+        },
+      ],
+      personal: {
+        'book-reader': 'Autodidacta',
+        'users': 'Buenas relaciones interpersonales', // eslint-disable-line
+        'hands-helping': 'Colaboradora',
+        'magic': 'Habilidades', // eslint-disable-line
+        'walking': 'Proactiva', // eslint-disable-line
+        'user-clock': 'Puntual y responsable',
+      },
+      work: {
+        'calendar-check': 'Adaptabilidad a horarios flexibles',
+        'clock': 'Capacidad para trabajar bajo presión', // eslint-disable-line
+        'desktop': 'Habilidad para aprender programas rápidamente', // eslint-disable-line
+        'slideshare': 'Trabajo en equipo', // eslint-disable-line
+        'dna': 'Sentido de pertenencia empresarial', // eslint-disable-line
+      },
+    };
+  },
 };
 </script>
 
 <style scoped lang="scss">
-ol {
+ol.languages-list {
   counter-reset: language-counter;
-  list-style: none;
 
   & > li {
     counter-increment: language-counter;
+    font-size: 1.34rem;
 
     &::before {
       content: counter(language-counter) '°';
     }
-  }
-}
 
-ul {
-  list-style-type: none;
-
-  li::before {
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
+    & + li {
+      margin-top: 1.5rem;
+    }
   }
 
-  li.check-double::before {
-    content: '\f560';
+  & ul > li {
+    font-size: initial;
   }
-  li.check::before {
-    content: '\f00c';
+
+  small {
+    display: block;
+    margin: -0.2rem 0 1rem 1.7rem;
   }
 }
 </style>
