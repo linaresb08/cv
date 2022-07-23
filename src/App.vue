@@ -5,6 +5,7 @@
     <Qualities />
     <Education />
     <Trainings />
+    <Experiences />
     <img alt="Vue logo" src="./assets/logo.png" />
     <button class="btn" @click="changeTheme">Hola</button>
     <code>hola</code>
@@ -14,6 +15,7 @@
 <script>
 import Cover from './components/Cover.vue';
 import Education from './components/Education.vue';
+import Experiences from './components/Experiences.vue';
 import Navigation from './components/Navigation.vue';
 import Qualities from './components/Qualities.vue';
 import Trainings from './components/Trainings.vue';
@@ -23,6 +25,7 @@ export default {
   components: {
     Cover,
     Education,
+    Experiences,
     Navigation,
     Qualities,
     Trainings,
